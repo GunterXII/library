@@ -1,0 +1,261 @@
+.titolo{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    color: #4A90E2;
+    padding-top: 30px;
+}
+.bottone{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin:20px auto;
+    color:#4A90E2;
+    background-color: rgba(0,0,0,.1);
+    cursor:pointer;
+    transition: box-shadow 0.3s ease;
+}
+.contenitore1{
+    width:30%;
+     background-color: #F5F5F5;
+     height: 100vh;
+     margin-top:auto
+}
+.divider {
+  width: 90%;
+  margin: 10px auto;
+  border: none;
+  border-top: 5px solid #4A90E2;
+  border-radius: 20px;
+}
+.icon-under-button{
+    text-align: center;
+    opacity: 0.6;
+     transition: transform 0.3s ease;
+}
+.icon-under-button img:hover {
+  transform: scale(1.1) rotate(5deg);
+  opacity: 1;
+}
+.stats {
+  color: #666666;
+  font-size: 2rem;
+}
+#libro{
+    transition: transform 0.3s ease;
+}
+#libro:hover{
+     transform: translateX(20px) translateY(-20px) scale(1.1);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    transition: transform 0.3s ease;
+}
+h1:hover{
+    border-bottom: 2px solid #4A90E2;
+     transform: translateX(-20px) translateY(-20px) scale(1.1);
+}
+body {
+  color: #333333;
+  font-family:  'Roboto', sans-serif;
+   display: flex; /* Imposta il body come flex container per affiancare i contenitori */
+  height: 100vh; /* Altezza piena della finestra */
+}
+    button:hover {
+  background-color: #D9E6F2;
+  color: #333333;
+  transform: translateX(1px) translateY(-10px) scale(1.1);
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.6);
+}
+.descrizione-bottone {
+  
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666666;
+  font-style: italic;
+  text-align: center;
+}
+
+.contenitore2 {
+  width: 70%; /* 70% dello schermo a destra */
+  background-color: #D6E4FF; /* azzurro chiaro (come suggerito) */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.titolo2{
+    margin: 0 auto;
+    width:100%;
+    border-bottom: 5px solid #2C3E50;
+     color: #2C3E50; /* un blu scuro elegante */
+     letter-spacing: 5px;
+     padding-bottom: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.card-libro {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+transition:transform 0.3s ease};
+
+.card-libro:hover {
+  transform: scale(1.1);
+}
+.card-libro.card-animata {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#lista-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* spazio tra le card */
+}
+/* Stato iniziale: fuori dalla schermata a sinistra e trasparente */
+form.aggiungilibro {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: block; /* Sarà visibile ma fuori dallo schermo */
+  position: relative;
+}
+.icona-trash:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+/* Quando appare: torna visibile e nella posizione normale */
+form.aggiungilibro.mostra {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* Contenitore per controllare larghezza e posizionamento */
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Nascondi freccia nativa e rendi il select “piatto” */
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #4A90E2;
+  border-radius: 8px;
+  background-color: #F5F5F5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icona freccia personalizzata */
+.select-wrapper::after {
+  content: '▾';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1rem;
+  color: #4A90E2;
+}
+
+/* Effetto hover/focus */
+.select-wrapper select:hover,
+.select-wrapper select:focus {
+  border-color: #2C3E50;
+  box-shadow: 0 0 5px rgba(74,144,226,0.4);
+  outline: none;
+}
+
+
+#form.nascondi {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+#btnform{
+    border:none;
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    margin:0 auto;
+    cursor: pointer;
+}
+.aggiungilibro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #EAF2FF; /* azzurro chiarissimo */
+  padding: 15px;
+  border-radius: 10px;
+  width:30%;
+  justify-self: center;
+  align-self: center;
+  box-shadow: 3px 3px 3px black;
+border: none;
+  outline: none; 
+  text-align: center;
+}
+
+
+.aggiungilibro label {
+  font-weight: bold;
+  color: #2C3E50;
+  display: block;
+  text-align: center;
+}
+
+.aggiungilibro input {
+  padding: 8px;
+  
+  border-radius: 6px;
+  font-size: 1rem;
+  width:200px;
+  margin: 0 auto;
+background-color: #D0E8FF; /* celeste pastello */
+box-shadow: 1px 3px 3px black;
+border: none;
+  outline: none; 
+  text-align: center;
+}
+.label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.label,.l{
+    margin-top: 20px;
+}
+.label,.l>img:first-of-type{
+    text-align: end;
+    padding-left:10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.label,.l>img:hover{
+    transform: scale(1.2) translateY(-10px) translateX(10px)
+}
+.label>label:hover{
+     transform: scale(1.2) translateY(-10px) translateX(10px)
+}
+.label>label{
+     transition:transform 0.3s ease
+}

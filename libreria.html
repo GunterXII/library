@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria</title>
+    <link rel="stylesheet" href="libreria.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="contenitore1">
+        <div class="titolo">
+        <h1>La mia libreria</h1>
+        <img src="./svg/book.svg" alt="" width="50px" id="libro">
+    </div>
+    <button class="bottone" id="bottone1"><span>Aggiungi libro</span><img src="./svg/plus.svg" alt=""></button>
+    <p class="descrizione-bottone">Clicca per aggiungere un nuovo libro alla tua libreria personale.</p>
+<hr class="divider" />
+<div class="icon-under-button">
+  <img src="./svg/book-open.svg" alt="Icona libro aperto" width="80px">
+  <div class="stats">
+  <p>Libri totali: <span id="numero">0</span></p>
+  <p>Libri letti: <span id="letto">0</span></p>
+</div>
+<div class="select-wrapper">
+  <select id="sort">
+    <option value="">Ordina per…</option>
+    <option value="titolo">Titolo (A→Z)</option>
+    <option value="autore">Autore (A→Z)</option>
+    <option value="pagine">Pagine (↑)</option>
+    <option value="rating">Rating (★→☆)</option>
+  </select>
+</div>
+
+</div>
+</div>
+<div class="contenitore2">
+    <div class="titolo2">
+        <h2>I MIEI LIBRI</h2>
+        <img src="./svg/arrow-down (1).svg" alt="" width="70">
+    </div>
+    <form action="" class="aggiungilibro"  id="form">
+        <div class="label">
+        <label for="autore">Autore</label><img src="./svg/author-sign-svgrepo-com.svg" alt="" width="20px">
+        </div><input type="text" name="autore" id="autore" required>
+        <div class="label"><label for="titolo">Titolo</label><img src="./svg/title-medal-svgrepo-com.svg" alt=""  width="20px">
+        </div><input type="text" name="titolo" id="titolo" required>
+        <div class="label"><label for="pagine">Pagine</label><img src="./svg/telephone-directory-svgrepo-com.svg" alt=""  width="30px">
+        </div><input type="number" id="pagine" required>
+        <div class="label l">
+            <label for="completato">Completato?</label>
+           <img src="./svg/checked-tick-svgrepo-com.svg" alt="" width="30px" id="checked"> <img src="./svg/cross-svgrepo-com.svg" alt="" width="50px" id="cross">
+        </div>
+        <button type="submit" id="btnform"><img src="./svg/plus.svg" alt=""></button>
+    </form>
+  <div id="lista-cards"></div>
+</div>
+    <script src="libreria.js"></script>
+</body>
+</html>
